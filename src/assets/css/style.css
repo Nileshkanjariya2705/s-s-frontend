@@ -1,0 +1,280 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.zoom-in-zoom-out {
+    animation: zoom-in-zoom-out 1.8s ease-out infinite;
+}
+@keyframes zoom-in-zoom-out {
+    0% {
+        transform: scale(0.8, 0.8);
+    }
+    50% {
+        transform: scale(1.15, 1.15);
+    }
+    100% {
+        transform: scale(0.8, 0.8);
+    }
+}
+
+.svg-outline-wrap {
+    width: 400px;
+    overflow: unset;
+}
+
+.svg-outline {
+    stroke: #486a1d;
+    stroke-width: 2px;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: outline 3s linear forwards infinite;
+}
+
+@keyframes outline {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+        fill: #ddd;
+    }
+
+    40% {
+        stroke-dashoffset: 0;
+        transform: translateY(-15px);
+        fill: #000;
+        animation: all 6s ease-in-out;
+    }
+
+    60% {
+        transform: translateY(-10px);
+        fill: #000;
+    }
+}
+.file-select::file-selector-button {
+    @apply bg-primarycolor rounded-lg text-white font-normal px-3 py-1.5 leading-5 outline-0 text-xs border-[1px] absolute right-3 top-2 cursor-pointer hover:bg-white hover:text-primarycolor hover:border-primarycolor;
+}
+.upload-transfer-receipt .file-select::file-selector-button {
+    @apply top-2 right-2;
+}
+.main-heading h1 {
+    @apply text-4xl leading-44px md:text-5xl md:leading-60px xxl:text-54px xxl:leading-66px max-w-xl font-bold text-black;
+}
+.main-heading h1 span {
+    @apply text-transparent bg-clip-text bg-gradient-to-r to-lightgreen from-darkgreen;
+}
+/* calender_DatePicker-start */
+.cs-datepicker-css .react-datepicker-wrapper {
+    @apply w-full;
+}
+.cs-datepicker-css .react-datepicker__triangle {
+    @apply hidden;
+}
+.cs-datepicker-css .react-datepicker {
+    @apply border-2 border-black/10;
+}
+.cs-datepicker-css .react-datepicker__header {
+    @apply bg-primarycolor/10 px-3 py-5;
+}
+.cs-datepicker-css .react-datepicker__current-month,
+.cs-datepicker-css .react-datepicker-time__header,
+.cs-datepicker-css .react-datepicker-year-header {
+    @apply text-primarycolor text-base font-bold mb-3;
+}
+.cs-datepicker-css .react-datepicker__day-name {
+    @apply text-primarycolor font-semibold text-xs;
+}
+.cs-datepicker-css .react-datepicker__navigation-icon {
+    @apply top-2;
+}
+.cs-datepicker-css .react-datepicker__navigation-icon {
+    @apply before:border-primarycolor;
+}
+.cs-datepicker-css .react-datepicker-time__header {
+    @apply mb-0;
+}
+.cs-datepicker-css .react-datepicker__day--selected,
+.cs-datepicker-css .react-datepicker__day--in-selecting-range,
+.cs-datepicker-css .react-datepicker__day--in-range,
+.cs-datepicker-css .react-datepicker__month-text--selected,
+.cs-datepicker-css .react-datepicker__month-text--in-selecting-range,
+.cs-datepicker-css .react-datepicker__month-text--in-range,
+.cs-datepicker-css .react-datepicker__quarter-text--selected,
+.cs-datepicker-css .react-datepicker__quarter-text--in-selecting-range,
+.cs-datepicker-css .react-datepicker__quarter-text--in-range,
+.cs-datepicker-css .react-datepicker__year-text--selected,
+.cs-datepicker-css .react-datepicker__year-text--in-selecting-range,
+.cs-datepicker-css .react-datepicker__year-text--in-range {
+    @apply bg-primarycolor text-white;
+}
+.cs-datepicker-css .react-datepicker__day--keyboard-selected,
+.cs-datepicker-css .react-datepicker__month-text--keyboard-selected,
+.cs-datepicker-css .react-datepicker__quarter-text--keyboard-selected,
+.cs-datepicker-css .react-datepicker__year-text--keyboard-selected {
+    @apply bg-primarycolor text-white w-7 h-7;
+}
+.cs-datepicker-css .react-datepicker {
+    font-family: "Poppins", sans-serif !important;
+}
+.cs-datepicker-css .react-datepicker__d {
+    @apply font-medium;
+}
+.cs-datepicker-css
+    .react-datepicker__time-container
+    .react-datepicker__time
+    .react-datepicker__time-box
+    ul.react-datepicker__time-list
+    li.react-datepicker__time-list-item--selected,
+.cs-datepicker-css
+    .react-datepicker__time-container
+    .react-datepicker__time
+    .react-datepicker__time-box
+    ul.react-datepicker__time-list
+    li.react-datepicker__time-list-item--selected:hover,
+.cs-datepicker-css .react-datepicker__day--selected:hover {
+    @apply bg-primarycolor text-white;
+}
+.cs-checkout label,
+.radio-label-mb label {
+    @apply !mb-0;
+}
+.cs-checkout input,
+.radio-label-mb input {
+    @apply !w-4 h-4;
+}
+.css-disable-border .cs-border-disable {
+    @apply !p-0 border-0 mt-0;
+}
+.css-disable-border .cs-border-disable .cs-full {
+    @apply !w-full px-0;
+}
+.css-disable-border .cs-border-disable .file-select::file-selector-button {
+    @apply top-2 right-2;
+}
+.cs-border-disable .cs-width-img {
+    @apply w-32 h-32 p-3;
+}
+.cs-border-disable .cs-width-img img {
+    @apply w-full h-full object-cover;
+}
+.even .chat-ui {
+    @apply rounded-br-none;
+}
+.odd .chat-ui {
+    @apply rounded-bl-none;
+}
+.even .chat-wrap {
+    @apply flex-row-reverse;
+}
+.odd .chat-ui-time {
+    @apply !pl-52px;
+}
+
+.blog-detail-rs img {
+    @apply w-full;
+}
+.order-detail-select .css-15lsz6c-indicatorContainer,
+.css-15lsz6c-indicatorContainer {
+    @apply !p-0;
+}
+.order-detail-select .css-t3ipsp-control,
+.css-t3ipsp-control {
+    @apply !border-primarycolor/50 !shadow-none;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e9e9e9;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #e9e9e9;
+}
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    border-radius: 10px;
+    background-color: #486a1d;
+}
+::-webkit-scrollbar {
+    height: 5px;
+}
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+.cs-datepicker-css .react-datepicker__month-container {
+    @apply w-238px lg:w-auto;
+}
+.cs-datepicker-css .react-datepicker__time-container {
+    @apply w-75px lg:w-auto;
+}
+.cs-datepicker-css .react-datepicker-popper {
+    @apply w-318px md:w-auto;
+}
+.language-ch-arb .apexcharts-title-text {
+    @apply rtl:translate-x-40;
+}
+.language-ch-arb .apexcharts-yaxis {
+    @apply rtl:translate-x-full;
+}
+.cs-action label {
+    @apply hidden;
+}
+.text-truncate{
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.subtext-truncate{
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+body {
+    margin: 0px;
+  }
+  .svg-outline-wrap {
+    width: 300px;
+    overflow: unset;
+  }
+  .svg-outline {
+    stroke: #486A1D;
+    stroke-width: 1px;
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: outline 4s linear forwards infinite;
+  }
+  @keyframes outline {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {        
+      transform: translateY(0);
+      fill: #C6DFA6;
+
+    }
+
+    40% {
+      stroke-dashoffset: 0;
+      transform: translateY(-15px);
+      fill: #486A1D;
+      animation: all 6s ease-in-out;
+    }
+
+    60% {
+      transform: translateY(-10px);
+      fill: #486A1D;
+    }
+   
+  }
